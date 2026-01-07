@@ -39,23 +39,20 @@ vz.options = {
 	middleware: [
 		{
 			title: 'Local (default)',
-			url: 'api'
-			// live: 8082					// NOTE: live updates require
+			url: ''
+			live: 8082					// NOTE: live updates require
 														//    - push-server running and
 														//    - either apache proxy forwarding configured according to
 														//			https://github.com/volkszaehler/volkszaehler.org/issues/382
 														// 		- or push-server live update port configured and accessible
-		}, {
-			title: 'Volkszaehler Demo',
-			url: 'https://demo.volkszaehler.org/middleware.php'
-		}
+		},
 	],
 	monthNames: ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
 	dayNames: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'],
 	lineWidthDefault: 2,
 	lineWidthSelected: 4,
 	gap: 3600, // chart gap if no tuples for specified number of seconds
-	hiddenProperties: ['link', 'tolerance', 'local', 'owner', 'description', 'gap', 'active'] // hide less commonly used properties
+	hiddenProperties: ['link', 'tolerance', 'local', 'owner', 'gap', 'active'] // hide less commonly used properties
 };
 
 /**
@@ -108,7 +105,7 @@ vz.options.plot = {
 	],
 	selection: { mode: 'x' },
 	crosshair: {
-		mode: 'x',
+		mode: 'xy',
 		leaveCallback: vz.wui.plotLeave
 	},
 	grid: {
