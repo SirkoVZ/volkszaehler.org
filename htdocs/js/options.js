@@ -40,7 +40,7 @@ vz.options = {
 		{
 			title: 'Local (default)',
 			url: ''
-			live: 8082					// NOTE: live updates require
+			//live: 8082					// NOTE: live updates require
 														//    - push-server running and
 														//    - either apache proxy forwarding configured according to
 														//			https://github.com/volkszaehler/volkszaehler.org/issues/382
